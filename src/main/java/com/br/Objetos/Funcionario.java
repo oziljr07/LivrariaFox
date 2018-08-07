@@ -1,10 +1,19 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.br.Objetos;
 
-
-public class Cliente {
-
+/**
+ *
+ * @author vitor.7716
+ */
+public class Funcionario {
+   
    private long id;
+   
+   private String cargo;
    private String nome;
    private String rg;
    private String cpf;
@@ -13,20 +22,25 @@ public class Cliente {
    private String email;
    private int telefone;
 
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getRg() {
@@ -35,14 +49,6 @@ public class Cliente {
 
     public void setRg(String rg) {
         this.rg = rg;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getUsuario() {
@@ -61,14 +67,6 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public int getTelefone() {
         return telefone;
     }
@@ -76,10 +74,6 @@ public class Cliente {
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
-
    
-   
-           
-
     
 }
