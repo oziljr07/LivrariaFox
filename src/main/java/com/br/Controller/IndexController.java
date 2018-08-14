@@ -5,10 +5,17 @@
  */
 package com.br.Controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 /**
  *
  * @author thiago.276014
  */
+   @Controller //Responsável tanto por receber requisições como por enviar a resposta ao usuário
 public class IndexController {
-    
+    @RequestMapping("/")//Define a url que quando for requisitada chamara o metodo
+    public String index(){
+        return "index";
+    } 
 }
