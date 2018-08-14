@@ -6,7 +6,6 @@
 package com.br.Repository;
 
 import com.br.Objetos.Cliente;
-import com.br.Objetos.Funcionario;
 import org.springframework.data.repository.CrudRepository;
 
 /**
