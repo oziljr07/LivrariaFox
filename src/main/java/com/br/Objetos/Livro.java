@@ -32,7 +32,9 @@ public class Livro {
     @NotEmpty
     private Date datapub;
     @NotEmpty
-    private int idadeind; 
+    private int idadeind;
+    @NotEmpty 
+    private String colecao;
     @NotEmpty
     private byte capa;
 
