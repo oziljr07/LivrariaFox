@@ -6,19 +6,34 @@
 package com.br.Objetos;
 
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 /**
  *
  * @author thiago.276014
  */
+@Entity
 public class Livro {
-    private String titulo;
-    private String genero;
-    private String autor;
-    private float preco;
-    private Date datapub;
-    private int idadeind;
+    @Id 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @NotEmpty
+    private String titulo;
+    @NotEmpty
+    private String genero;
+    @NotEmpty
+    private String autor;
+    @NotEmpty
+    private float preco;
+    @NotEmpty
+    private Date datapub;
+    @NotEmpty
+    private int idadeind; 
+    @NotEmpty
     private byte capa;
 
     public String getTitulo() {

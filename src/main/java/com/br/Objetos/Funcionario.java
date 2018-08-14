@@ -5,21 +5,36 @@
  */
 package com.br.Objetos;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+
 /**
  *
  * @author vitor.7716
  */
+@Entity
 public class Funcionario {
-   
+   @Id
+   @GeneratedValue(strategy = GenerationType.AUTO)
    private long id;
-   
+       @NotEmpty
    private String cargo;
+        @NotEmpty
    private String nome;
+         @NotEmpty
    private String rg;
+          @NotEmpty
    private String cpf;
+           @NotEmpty
    private String usuario;
+            @NotEmpty
    private String senha;
+             @NotEmpty
    private String email;
+              @NotEmpty
    private int telefone;
 
 
