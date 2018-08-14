@@ -1,0 +1,28 @@
+.pesquisa{
+	width: 300px !important;
+}
+.logo{
+	width: 50px;
+	height: 50px;
+}
+.radius{
+	border-radius: 20px;
+}
+.fundonav{
+	background: linear-gradient(to right, red , yellow);
+}
+.tamanho{
+	width: 187px;
+	height: 270px;
+	padding: 5px;
+}
+.tamanhos{
+	width: 190px;
+	height: 275px;
+}
+.livro:hover { 
+	border-style: solid;
+    border-color: rgba(0,0,0,0.7);
+}
+
+
