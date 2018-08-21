@@ -5,6 +5,7 @@
  */
 package com.br.Objetos;
 
+import java.sql.Blob;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,7 +37,7 @@ public class Livro {
     @NotEmpty 
     private String colecao;
     @NotEmpty
-    private byte capa;
+    private Blob capa;
 
     public String getTitulo() {
         return titulo;
@@ -94,13 +95,13 @@ public class Livro {
         this.id = id;
     }
 
-    public byte getCapa() {
+    public Blob getCapa() {
         return capa;
     }
 
-    public void setCapa(byte capa) {
+    public void setCapa(Blob capa) {
         this.capa = capa;
-    }
+    }    
 
     public String getColecao() {
         return colecao;
