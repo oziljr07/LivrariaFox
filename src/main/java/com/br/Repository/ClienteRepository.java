@@ -15,5 +15,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface ClienteRepository extends CrudRepository<Cliente, String> {
         Cliente findByCodigo(long codigo);
         Cliente findByCliente(String usuario,String senha);
+
+    public Cliente findOne(long id);
         
 }
