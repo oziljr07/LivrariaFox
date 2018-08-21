@@ -14,12 +14,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface FuncionarioRepository extends CrudRepository<Funcionario, String> {
         Funcionario findByCodigo(long codigo);
-        Iterable<Funcionario> findByNome(String nome);
-        Iterable<Funcionario> findByCargo(String cargo);
-        Iterable<Funcionario> findByRg(String rg);
-        Iterable<Funcionario> findByCpf(String cpf);
-        Iterable<Funcionario> findByUsuario(String usuario);
-        Iterable<Funcionario> findBySenha(String senha);
-        Iterable<Funcionario> findByEmail(String email);
-        Iterable<Funcionario> findByTelefone(int telefone);
+        Funcionario findByFunc(String nome,String senha);
 }
