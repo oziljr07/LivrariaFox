@@ -5,9 +5,12 @@
  */
 package com.br.Controller;
 
+import com.br.Objetos.Cliente;
 import com.br.Repository.ClienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
@@ -17,14 +20,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginController {
     
-    @RequestMapping("/login.html")//Define a url que quando for requisitada chamara o metodo
-    public String login(){
+    @Autowired
+    private ClienteRepository cr;
+    
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
         return "login";
     }
-    @RequestMapping("/verificaLogin")
-    public boolean verificarLogin(String nome,String senha){
-        
-        
-        return true;
+    
+    @RequestMapping(value = "/verificarLogin", method = RequestMethod.POST)
+    public String verificarLogin(String usuario,String senha){    
+        try {
+            Cliente cli = cr.findByCliente(usuario, senha);
+            return "Sucesso";
+        } catch (Exception e) {
+            return "Erro = "+e.toString();
+        }
+
     }
 }

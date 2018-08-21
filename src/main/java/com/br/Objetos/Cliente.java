@@ -1,31 +1,46 @@
-
 package com.br.Objetos;
 
+import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotEmpty;
 
 @Entity
-public class Cliente {
-    @Id 
+public class Cliente implements Serializable {
+
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-   private long id;
-    @NotEmpty
-   private String nome;
-    @NotEmpty
-   private String rg;
-    @NotEmpty
-   private String cpf;
-    @NotEmpty
-   private String usuario;
-    @NotEmpty
-   private String senha;
-    @NotEmpty
-   private String email;
-    @NotEmpty
-   private int telefone;
+    private long id;
+    @Column(name = "nome", nullable = false)
+    private String nome;
+    @Column(name = "rg", nullable = false)
+    private String rg;
+    @Column(name = "cpf", nullable = false)
+    private String cpf;
+    @Column(name = "usuario", nullable = false)
+    private String usuario;
+    @Column(name = "senha", nullable = false)
+    private String senha;
+    @Column(name = "email", nullable = false)
+    private String email;
+    @Column(name = "telefone", nullable = false)
+    private int telefone;
+
+    public Cliente(String nome, String rg, String cpf, String usuario, String senha, String email, int telefone) {
+        this.nome = nome;
+        this.rg = rg;
+        this.cpf = cpf;
+        this.usuario = usuario;
+        this.senha = senha;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
+    public Cliente() {
+
+    }
 
     public long getId() {
         return id;
@@ -91,9 +106,4 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-   
-   
-           
-
-    
 }

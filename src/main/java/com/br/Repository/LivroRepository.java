@@ -6,6 +6,7 @@
 package com.br.Repository;
 
 import com.br.Objetos.Livro;
+import java.sql.Blob;
 import java.util.Date;
 import org.springframework.data.repository.CrudRepository;
 
@@ -21,6 +22,6 @@ public interface LivroRepository extends CrudRepository<Livro, String>{
     Iterable<Livro> findByPreco(float preco);
     Iterable<Livro> findByAutor(String autor);
     Iterable<Livro> findByIdadeIndicativa(int idade);
-    Iterable<Livro> findByCapa(byte capa);
+    Iterable<Livro> findByCapa(Blob capa);
     Iterable<Livro> findByColecao(String colecao);
 }
