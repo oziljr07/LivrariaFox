@@ -21,5 +21,6 @@ public interface LivroRepository extends CrudRepository<Livro, String>{
     Iterable<Livro> findByPreco(float preco);
     Iterable<Livro> findByAutor(String autor);
     Iterable<Livro> findByIdadeIndicativa(int idade);
+    Iterable<Livro> findByCapa(byte capa);
     Iterable<Livro> findByColecao(String colecao);
 }
