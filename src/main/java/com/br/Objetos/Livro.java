@@ -7,10 +7,12 @@ package com.br.Objetos;
 
 import java.sql.Blob;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.validation.constraints.NotEmpty;
 
 /**
@@ -37,8 +39,16 @@ public class Livro {
     @NotEmpty 
     private String colecao;
     @NotEmpty
-    private Blob capa;
+    private byte capa;
 
+    public byte getCapa() {
+        return capa;
+    }
+
+    public void setCapa(byte capa) {
+        this.capa = capa;
+    }
+    
     public String getTitulo() {
         return titulo;
     }
@@ -95,14 +105,7 @@ public class Livro {
         this.id = id;
     }
 
-    public Blob getCapa() {
-        return capa;
-    }
-
-    public void setCapa(Blob capa) {
-        this.capa = capa;
-    }    
-
+   
     public String getColecao() {
         return colecao;
     }
