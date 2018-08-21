@@ -101,6 +101,14 @@ public class Livro {
     public void setCapa(byte capa) {
         this.capa = capa;
     }
+
+    public String getColecao() {
+        return colecao;
+    }
+
+    public void setColecao(String colecao) {
+        this.colecao = colecao;
+    }
     
     
             
