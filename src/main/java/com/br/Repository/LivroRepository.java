@@ -8,13 +8,14 @@ package com.br.Repository;
 import com.br.Objetos.Livro;
 import java.sql.Blob;
 import java.util.Date;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author vitor.7716
  */
-public interface LivroRepository extends CrudRepository<Livro, String>{
+public interface LivroRepository extends JpaRepository<Livro, String>{
     Livro findByCodigo(long codigo);
     Iterable<Livro> findByTitulo(String titulo);
     Iterable<Livro> findByGenero(String genero);
@@ -22,6 +23,6 @@ public interface LivroRepository extends CrudRepository<Livro, String>{
     Iterable<Livro> findByPreco(float preco);
     Iterable<Livro> findByAutor(String autor);
     Iterable<Livro> findByIdadeIndicativa(int idade);
-    Iterable<Livro> findByCapa(Blob capa);
+    Iterable<Livro> findByCapa(byte capa);
     Iterable<Livro> findByColecao(String colecao);
 }

@@ -5,6 +5,7 @@
  */
 package com.br.Objetos;
 
+import java.io.Serializable;
 import java.sql.Blob;
 import java.util.Date;
 import javax.persistence.Column;
@@ -20,7 +21,8 @@ import javax.validation.constraints.NotEmpty;
  * @author thiago.276014
  */
 @Entity
-public class Livro {
+public class Livro implements Serializable {
+     private static final long serialVersionUID = 1L;
     @Id 
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

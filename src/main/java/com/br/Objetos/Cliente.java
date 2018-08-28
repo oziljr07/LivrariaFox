@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Cliente implements Serializable {
+     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,6 +41,10 @@ public class Cliente implements Serializable {
 
     public Cliente() {
 
+    }
+
+    public Cliente(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public long getId() {

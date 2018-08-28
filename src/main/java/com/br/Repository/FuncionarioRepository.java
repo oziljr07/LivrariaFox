@@ -6,13 +6,14 @@
 package com.br.Repository;
 
 import com.br.Objetos.Funcionario;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author vitor.7716
  */
-public interface FuncionarioRepository extends CrudRepository<Funcionario, String> {
+public interface FuncionarioRepository extends JpaRepository<Funcionario, String> {
         Funcionario findByCodigo(long codigo);
         Funcionario findByFunc(String nome,String senha);
 }
