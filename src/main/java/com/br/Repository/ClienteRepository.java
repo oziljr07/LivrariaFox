@@ -6,13 +6,14 @@
 package com.br.Repository;
 
 import com.br.Objetos.Cliente;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author vitor.7716
  */
-public interface ClienteRepository extends CrudRepository<Cliente, String> {
+public interface ClienteRepository extends JpaRepository<Cliente, String> {
         Cliente findByCodigo(long codigo);
         Cliente findByCliente(String usuario,String senha);
 

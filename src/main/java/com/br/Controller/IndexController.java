@@ -17,5 +17,10 @@ public class IndexController {
     @RequestMapping("/")//Define a url que quando for requisitada chamara o metodo
     public String index(){
         return "index";
-    } 
+    }
+    
+       @RequestMapping("/login" )
+    public String login() {
+        return "login";
+    }
 }
